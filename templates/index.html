@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Book Review App</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Books</h1>
+    <form action="/add_book" method="post">
+        <div class="form-group">
+            <input type="text" name="title" class="form-control" placeholder="Book Title">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </div>
+    </form>
+
+    <ul class="list-group mt-3">
+        {% for book in books %}
+        <li class="list-group-item">
+            <h5>{{ book.title }}
+                <a href="/delete_book/{{ book.id }}" class="btn btn-danger btn-sm float-right ml-2">Delete Book</a>
+            </h5>
+            <form action="/add_review/{{ book.id }}" method="post">
+                <div class="form-group">
+                    <input type="text" name="comment" class="form-control" placeholder="Review Comment">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="rating" min="1" max="5" class="form-control" placeholder="Rating (1-5)">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-secondary">Add Review</button>
+                </div>
+            </form>
+            {% for review in book.reviews %}
+            <p>
+                Rating: {{ review.rating }} - {{ review.comment }}
+                <a href="/delete_review/{{ review.id }}" class="btn btn-danger btn-sm float-right">Delete Review</a>
+            </p>
+
+            {% endfor %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
