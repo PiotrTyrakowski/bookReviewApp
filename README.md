@@ -9,10 +9,10 @@
 - [Future Enhancements](#future-enhancements)
 - [FAQ](#faq)
 
-## 1. Introduction
+## 1. Introduction {#introduction}
 The Book Review App is a web-based application designed to catalog books and their respective reviews. Built using Flask, SQLAlchemy, and SQLite, it serves as a demonstration of CRUD (Create, Read, Update, Delete) operations in a web application context.
 
-## 2. Setup and Installation
+## 2. Setup and Installation {#setup-and-installation}
 **Requirements:**
 - Python (3.x recommended)
 - Flask
@@ -33,14 +33,14 @@ The Book Review App is a web-based application designed to catalog books and the
    ```bash
    python app.py
 
-## 3. Features
+## 3. Features {#features}
 - Add Books: Users can add new books to the catalog.
 - Review Books: For each book, users can add reviews which include a rating and a comment.
 - List Books & Reviews: All books and their respective reviews are listed on the homepage.
 - Delete Books: Books can be deleted from the catalog. All related reviews get automatically deleted.
 - Delete Reviews: Specific reviews can be removed individually.
 
-## 4. Application Structure
+## 4. Application Structure {#application-structure}
 
 - Backend (Python with Flask): Main application logic, database interactions, and routing are managed here.
 
@@ -56,7 +56,7 @@ The Book Review App is a web-based application designed to catalog books and the
   - Frontend (HTML with Bootstrap): The visual interface of the application, using templating to render dynamic content.
   -Database (SQLite with SQLAlchemy): Data persistence layer. Uses SQLAlchemy ORM to map Python classes to database tables and vice versa.
 
-## 5. Testing
+## 5. Testing {#testing}
 The Book Review App incorporates a series of tests to ensure its core functionalities work as expected. The tests are written using Python's built-in unittest library.
 
 To execute the tests, run the script containing the test cases. The tests cover the following functionalities:
@@ -67,12 +67,11 @@ To execute the tests, run the script containing the test cases. The tests cover 
   
 Refer to the testing script provided for detailed test case implementations.
 
-## 6. Future Enhancements
+## 6. Future Enhancements {#future-enhancements}
 - User Authentication: Add the ability for users to register, login, and manage their reviews.
 - Search Feature: Implement a search feature for users to easily find books or specific reviews.
 - Book Details API Integration: Retrieve detailed information about books from external sources.
-## 7. FAQ
-
+## 7. FAQ {#faq}
 Q: How can I contribute to the project?
 
 A: Contributions are always welcome! Please fork the repository, make your changes, and submit a pull request.
